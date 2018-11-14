@@ -10,6 +10,8 @@
 		FA994B0C219C852900654400 /* NSNetworkingMocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA994B02219C852900654400 /* NSNetworkingMocker.framework */; };
 		FA994B11219C852900654400 /* NSNetworkingMockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA994B10219C852900654400 /* NSNetworkingMockerTests.swift */; };
 		FA994B13219C852900654400 /* NSNetworkingMocker.h in Headers */ = {isa = PBXBuildFile; fileRef = FA994B05219C852900654400 /* NSNetworkingMocker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA994B1E219C854200654400 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA994B1D219C854200654400 /* MockURLProtocol.swift */; };
+		FA994B20219C855D00654400 /* NetworkingMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA994B1F219C855D00654400 /* NetworkingMocker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,9 @@
 		FA994B0B219C852900654400 /* NSNetworkingMockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSNetworkingMockerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA994B10219C852900654400 /* NSNetworkingMockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNetworkingMockerTests.swift; sourceTree = "<group>"; };
 		FA994B12219C852900654400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA994B1D219C854200654400 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		FA994B1F219C855D00654400 /* NetworkingMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMocker.swift; sourceTree = "<group>"; };
+		FA994B21219C858100654400 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +76,10 @@
 		FA994B04219C852900654400 /* NSNetworkingMocker */ = {
 			isa = PBXGroup;
 			children = (
+				FA994B1C219C853100654400 /* Sources */,
 				FA994B05219C852900654400 /* NSNetworkingMocker.h */,
 				FA994B06219C852900654400 /* Info.plist */,
+				FA994B21219C858100654400 /* README.md */,
 			);
 			path = NSNetworkingMocker;
 			sourceTree = "<group>";
@@ -84,6 +91,15 @@
 				FA994B12219C852900654400 /* Info.plist */,
 			);
 			path = NSNetworkingMockerTests;
+			sourceTree = "<group>";
+		};
+		FA994B1C219C853100654400 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FA994B1D219C854200654400 /* MockURLProtocol.swift */,
+				FA994B1F219C855D00654400 /* NetworkingMocker.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +164,7 @@
 				TargetAttributes = {
 					FA994B01219C852900654400 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					FA994B0A219C852900654400 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA994B20219C855D00654400 /* NetworkingMocker.swift in Sources */,
+				FA994B1E219C854200654400 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +360,7 @@
 		FA994B17219C852900654400 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.netsells.NSNetworkingMocker;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +387,7 @@
 		FA994B18219C852900654400 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +413,7 @@
 		FA994B1A219C852900654400 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JHJ67RZB8;
 				INFOPLIST_FILE = NSNetworkingMockerTests/Info.plist;
@@ -409,6 +432,7 @@
 		FA994B1B219C852900654400 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JHJ67RZB8;
 				INFOPLIST_FILE = NSNetworkingMockerTests/Info.plist;
