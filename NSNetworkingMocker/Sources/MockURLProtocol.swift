@@ -8,9 +8,9 @@
 
 import Foundation
 
-class MockURLProtocol: URLProtocol {
+public final class MockURLProtocol: URLProtocol {
     
-    enum MockURLProtocolError: Swift.Error {
+    public enum MockURLProtocolError: Swift.Error {
         case missingConfiguration(url: String)
         case noDataProvidedWhenExpected(url: String)
     }
@@ -20,29 +20,29 @@ class MockURLProtocol: URLProtocol {
         return NetworkingMocker.mocks.keys.first(where: { $0 == url }) != nil
     }
     
-    override class func canInit(with task: URLSessionTask) -> Bool {
+    override public class func canInit(with task: URLSessionTask) -> Bool {
         guard let url = task.currentRequest?.url else { return false }
         return canHandle(url: url)
     }
     
-    override class func canInit(with request: URLRequest) -> Bool {
+    override public class func canInit(with request: URLRequest) -> Bool {
         guard let url = request.url else { return false }
         return canHandle(url: url)
     }
     
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+    override public class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
     
-    override class func requestIsCacheEquivalent(_ a: URLRequest, to b: URLRequest) -> Bool {
+    override public class func requestIsCacheEquivalent(_ a: URLRequest, to b: URLRequest) -> Bool {
         return false
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         guard
             let url = request.url,
             let mock = NetworkingMocker.getMockConfiguration(for: url),
-            let httpResponse = HTTPURLResponse(url: mock.responseURL, statusCode: mock.statusCode, httpVersion: mock.httpVersion, headerFields: mock.headers)
+            let httpResponse = HTTPURLResponse(url: mock.responseURL, statusCode: mock.statusCode, httpVersion: mock.httpVersion.rawValue, headerFields: mock.headers)
             else {
                 client?.urlProtocol(self, didFailWithError: MockURLProtocolError.missingConfiguration(url: String(describing: request.url?.absoluteString)))
                 return
@@ -66,11 +66,10 @@ class MockURLProtocol: URLProtocol {
             }
         }
         
-        
     }
     
-    override func stopLoading() {
-        // Nothing needed to happen
+    override public func stopLoading() {
+        // Nothing to implement here
     }
     
 }

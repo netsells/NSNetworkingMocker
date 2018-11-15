@@ -8,10 +8,16 @@
 
 import Foundation
 
-class NetworkingMocker {
+public final class NetworkingMocker {
+    
+    public enum HTTPVersion: String {
+        case http1_0 = "HTTP/1.0"
+        case http1_1 = "HTTP/1.1"
+        case http2_0 = "HTTP/2.0"
+    }
     
     /// Configuration object for the response returned by MockURLProtocol
-    struct ResponseConfiguration {
+    public struct ResponseConfiguration {
         
         /// Status code expected in the response - defaults to 200
         var statusCode = 200
@@ -25,7 +31,8 @@ class NetworkingMocker {
         /// Headers expected in the response
         var headers: [String: String]?
         
-        var httpVersion = "1.1"
+        /// HTTP version used to init HTTPURLResponse
+        var httpVersion: HTTPVersion = .http1_1
         
         /// URL expected in the response
         var responseURL: URL!
@@ -35,18 +42,28 @@ class NetworkingMocker {
         
     }
     
-    /// Storage for mocks - They key is the URL given to the URLRequest or URLSessionDataTask
-    static var mocks = [URL: ResponseConfiguration]()
+    private static var unregistered = true
     
-    static func clearMocks() {
+    /// Storage for mocks - They key is the URL given to the URLRequest or URLSessionDataTask
+    public static var mocks = [URL: ResponseConfiguration]() {
+        didSet {
+            // Register the subclass with URLProtocol
+            if unregistered {
+                URLProtocol.registerClass(MockURLProtocol.self)
+                unregistered = false
+            }
+        }
+    }
+    
+    public static func clearMocks() {
         mocks = [:]
     }
     
-    static func addMockConfiguration(_ mock: ResponseConfiguration, for url: URL) {
+    public static func addMockConfiguration(_ mock: ResponseConfiguration, for url: URL) {
         mocks[url] = mock
     }
     
-    static func getMockConfiguration(for url: URL) -> ResponseConfiguration? {
+    public static func getMockConfiguration(for url: URL) -> ResponseConfiguration? {
         return mocks[url]
     }
 }
