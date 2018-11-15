@@ -12,6 +12,7 @@
 		FA994B13219C852900654400 /* NSNetworkingMocker.h in Headers */ = {isa = PBXBuildFile; fileRef = FA994B05219C852900654400 /* NSNetworkingMocker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA994B1E219C854200654400 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA994B1D219C854200654400 /* MockURLProtocol.swift */; };
 		FA994B20219C855D00654400 /* NetworkingMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA994B1F219C855D00654400 /* NetworkingMocker.swift */; };
+		FA994B23219D6F8600654400 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FA994B22219D6F8600654400 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		FA994B1D219C854200654400 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		FA994B1F219C855D00654400 /* NetworkingMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMocker.swift; sourceTree = "<group>"; };
 		FA994B21219C858100654400 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA994B22219D6F8600654400 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				FA994B05219C852900654400 /* NSNetworkingMocker.h */,
 				FA994B06219C852900654400 /* Info.plist */,
 				FA994B21219C858100654400 /* README.md */,
+				FA994B22219D6F8600654400 /* LICENSE */,
 			);
 			path = NSNetworkingMocker;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA994B23219D6F8600654400 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

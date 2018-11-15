@@ -1,21 +1,28 @@
-#  NSNetworking Mocker
+#  NSNetworkingMocker
+
+[![Build Status](https://travis-ci.com/netsells/NSNetworkingMocker.svg?branch=master)](https://travis-ci.com/netsells/NSNetworkingMocker)
+
 
 ## Purpose
-### To provide an easy way to mock network request with how we use our APIs
-### To provide an easy way to mock APIs while early in development
-
+* To provide an easy way to mock network request with how we use our APIs
+* To provide an easy way to mock APIs while early in development
 
 ## Set up
 
-### Essential Steps
+### Installation
 
-For MockURLprotocol to be detected by URLSession it must be registered before use.
+NSNetworkingMocker is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-```URLProtocol.registerClass(MockURLProtocol.self)```
-
-
-To proxy a request with MockURLProtocol you will need to do the following: 
+```ruby
+pod 'NSNetworkingMocker'
 ```
+
+MockURLProtocol is registered with URLProtocol as soon as a mock is added to the NetworkingMocker.mocks dictionary. After this has taken place it will be used automaticlly when using URLSession.shared.
+
+To proxy a request when using a custom URLSession configuration you will need to do the following: 
+
+```swift
 let config = URLSessionConfiguration.default
 config.protocolClasses = [MockURLProtocol.self]
 let session = URLSession(configuration: config)
@@ -23,3 +30,18 @@ let session = URLSession(configuration: config)
 let dataTask = session.dataTask(...
 ```
 
+If you use Alamofire then you will need to do the following: 
+
+```swift
+let configuration = URLSessionConfiguration.default
+configuration.protocolClasses = [MockingURLProtocol.self]
+let sessionManager = SessionManager(configuration: configuration)
+```
+
+## Author
+
+ABTucanae, tucanae@icloud.com
+
+## License
+
+NSNetworkLater is available under the MIT license. See the LICENSE file for more info.
