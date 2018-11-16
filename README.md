@@ -1,6 +1,7 @@
 #  NSNetworkingMocker
 
 [![Build Status](https://travis-ci.com/netsells/NSNetworkingMocker.svg?branch=master)](https://travis-ci.com/netsells/NSNetworkingMocker)
+[![Version](https://img.shields.io/cocoapods/v/NSNetworkingMocker.svg?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
 
 
 ## Purpose

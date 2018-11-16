@@ -23,22 +23,13 @@ NSNetworkingMocker is a simple library to provide an easy way to mock network re
 DESC
 
 s.homepage         = 'https://github.com/netsells/NSNetworkingMocker'
-# s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'ABTucanae' => 'tucanae@icloud.com' }
 s.source           = { :git => 'https://github.com/netsells/NSNetworkingMocker.git', :tag => s.version.to_s }
-# s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.ios.deployment_target = '10.0'
 s.swift_version = '4.2'
 
-s.source_files = 'NSNetworkingMocker/Classes/**/*'
+s.source_files = 'NSNetworkingMocker/Sources/**/*'
 
-# s.resource_bundles = {
-#   'NSNetworkingMocker' => ['NSNetworkingMocker/Assets/*.png']
-# }
-
-# s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
 end
