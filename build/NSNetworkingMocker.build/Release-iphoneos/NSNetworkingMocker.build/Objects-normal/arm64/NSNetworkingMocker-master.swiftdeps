@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "709aeafccc382709c0c12fe895c06764"
-build_time: [1542623050, 597479000]
+build_time: [1542623361, 177510000]
 inputs:
   "/Users/alex/Documents/netsells/internal/NSNetworkingMocker/NSNetworkingMocker/Sources/NetworkingMocker.swift": [9223372036, 854775807]
   "/Users/alex/Documents/netsells/internal/NSNetworkingMocker/NSNetworkingMocker/Sources/MockURLProtocol.swift": [9223372036, 854775807]
