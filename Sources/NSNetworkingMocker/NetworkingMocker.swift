@@ -13,8 +13,13 @@ public final class NetworkingMocker {
     
     /// Enum used to supply the http version for the ResponseConfiguration
     public enum HTTPVersion: String {
+        /// HTTP v1.0
         case http1_0 = "HTTP/1.0"
+        
+        /// HTTP v1.1
         case http1_1 = "HTTP/1.1"
+        
+        /// HTTP v2.0
         case http2_0 = "HTTP/2.0"
     }
     
