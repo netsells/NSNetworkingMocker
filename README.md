@@ -11,7 +11,7 @@
 * To provide an easy way to mock APIs while early in development
 
 ## Docs
-Docs created using [Jazzy](https://github.com/realm/jazzy)
+[Docs](https://netsells.github.io/NSNetworkingMocker/) created using [Jazzy](https://github.com/realm/jazzy)
 
 ## Set up
 
