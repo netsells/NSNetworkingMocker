@@ -10,6 +10,9 @@
 * To provide an easy way to mock network request with how we use our APIs
 * To provide an easy way to mock APIs while early in development
 
+## Docs
+Docs created using [Jazzy](https://github.com/realm/jazzy)
+
 ## Set up
 
 ### Installation
