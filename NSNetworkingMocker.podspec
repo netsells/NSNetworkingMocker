@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'NSNetworkingMocker'
-s.version          = '0.1.0'
+s.version          = '0.1.1'
 s.summary          = 'A mocker for help writing tests for network code, or to create a mock api'
 
 # This description is used to generate tags and improve search results.
@@ -30,6 +30,6 @@ s.source           = { :git => 'https://github.com/netsells/NSNetworkingMocker.g
 s.ios.deployment_target = '10.0'
 s.swift_version = '4.2'
 
-s.source_files = 'NSNetworkingMocker/Sources/**/*'
+s.source_files = 'Sources/*/**/*'
 
 end
