@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.com/netsells/NSNetworkingMocker.svg?branch=master)](https://travis-ci.com/netsells/NSNetworkingMocker)
 [![Version](https://img.shields.io/cocoapods/v/NSNetworkingMocker.svg?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
-[![License](https://img.shields.io/cocoapods/l/NSNetworkingMocker?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
-[![Platform](https://img.shields.io/cocoapods/p/NSNetworkingMocker?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
+[![License](https://img.shields.io/cocoapods/l/NSNetworkingMocker.svg?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
+[![Platform](https://img.shields.io/cocoapods/p/NSNetworkingMocker.svg?style=flat)](https://cocoapods.org/pods/NSNetworkingMocker)
 
 
 ## Purpose
