@@ -8,8 +8,10 @@
 
 import Foundation
 
+/// NetworkingMocker provides a way of storing and retrieving mock reponse objects for both MockURLProtocol and your code
 public final class NetworkingMocker {
     
+    /// Enum used to supply the http version for the ResponseConfiguration
     public enum HTTPVersion: String {
         case http1_0 = "HTTP/1.0"
         case http1_1 = "HTTP/1.1"
@@ -20,28 +22,29 @@ public final class NetworkingMocker {
     public struct ResponseConfiguration {
         
         /// Status code expected in the response - defaults to 200
-        var statusCode = 200
+        public var statusCode = 200
         
         /// Data expected in the response
-        var data: Data?
+        public var data: Data?
         
         /// Delay applied before the response is returned
-        var delay: TimeInterval = 0.5
+        public var delay: TimeInterval = 0.5
         
         /// Headers expected in the response
-        var headers: [String: String]?
+        public var headers: [String: String]?
         
         /// HTTP version used to init HTTPURLResponse
-        var httpVersion: HTTPVersion = .http1_1
+        public var httpVersion: HTTPVersion = .http1_1
         
         /// URL expected in the response
-        var responseURL: URL!
+        public var responseURL: URL!
         
         /// Set to false if data needs to equal nil - defaults to true
-        var expectsDataResponse = true
+        public var expectsDataResponse = true
         
     }
     
+    /// Used to determine if MockURLProtocol needs to be registered with URLProtocol
     private static var unregistered = true
     
     /// Storage for mocks - They key is the URL given to the URLRequest or URLSessionDataTask
@@ -55,14 +58,17 @@ public final class NetworkingMocker {
         }
     }
     
+    /// Clears the mocks dictionary
     public static func clearMocks() {
         mocks = [:]
     }
     
+    /// Adds a mock to the mocks dictionary using the url as the key
     public static func addMockConfiguration(_ mock: ResponseConfiguration, for url: URL) {
         mocks[url] = mock
     }
     
+    /// Returns the mock for the url provided. Returns nil if no key matches.
     public static func getMockConfiguration(for url: URL) -> ResponseConfiguration? {
         return mocks[url]
     }

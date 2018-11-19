@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alex/Documents/netsells/internal/NSNetworkingMocker/NSNetworkingMocker/Sources/NetworkingMocker.swift",
+      "line": 16,
+      "symbol": "NetworkingMocker.HTTPVersion.http1_0",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alex/Documents/netsells/internal/NSNetworkingMocker/NSNetworkingMocker/Sources/NetworkingMocker.swift",
+      "line": 17,
+      "symbol": "NetworkingMocker.HTTPVersion.http1_1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alex/Documents/netsells/internal/NSNetworkingMocker/NSNetworkingMocker/Sources/NetworkingMocker.swift",
+      "line": 18,
+      "symbol": "NetworkingMocker.HTTPVersion.http2_0",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alex/Documents/netsells/internal/NSNetworkingMocker"
+}

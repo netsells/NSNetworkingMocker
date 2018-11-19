@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MockURLProtocol Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MockURLProtocol" class="dashAnchor"></a>
+    <a title="MockURLProtocol Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">NSNetworkingMocker Docs</a> (89% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">NSNetworkingMocker Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MockURLProtocol Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MockURLProtocol.html">MockURLProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MockURLProtocol/MockURLProtocolError.html">– MockURLProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkingMocker.html">NetworkingMocker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkingMocker/HTTPVersion.html">– HTTPVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkingMocker/ResponseConfiguration.html">– ResponseConfiguration</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MockURLProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">MockURLProtocol</span> <span class="p">:</span> <span class="kt">URLProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>Subclass of URLProtocol used to intercept requests</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NSNetworkingMocker15MockURLProtocolC0cD5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/MockURLProtocolError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NSNetworkingMocker15MockURLProtocolC0cD5ErrorO">MockURLProtocolError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Errors that can be returned in the response via startLoading()</p>
+
+                        <a href="../Classes/MockURLProtocol/MockURLProtocolError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MockURLProtocolError</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:18NSNetworkingMocker15MockURLProtocolC9canHandle3urlSb10Foundation3URLV_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/canHandle(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:18NSNetworkingMocker15MockURLProtocolC9canHandle3urlSb10Foundation3URLV_tFZ">canHandle(url:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If the request URL doesn&rsquo;t exist as a key in the mocks dictionary, then MockURLProtocol won&rsquo;t assert that it can handle the request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canHandle</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canInitWithTask:"></a>
+                    <a name="//apple_ref/swift/Method/canInit(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canInitWithTask:">canInit(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will return true if canHandle(url:) returns true. Returns false if the task has no url.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canInit</span><span class="p">(</span><span class="n">with</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canInitWithRequest:"></a>
+                    <a name="//apple_ref/swift/Method/canInit(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canInitWithRequest:">canInit(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Will return true if canHandle(url:) returns true. Returns false if the request has no url.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canInit</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canonicalRequestForRequest:"></a>
+                    <a name="//apple_ref/swift/Method/canonicalRequest(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)canonicalRequestForRequest:">canonicalRequest(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the request unmodified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canonicalRequest</span><span class="p">(</span><span class="k">for</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)requestIsCacheEquivalent:toRequest:"></a>
+                    <a name="//apple_ref/swift/Method/requestIsCacheEquivalent(_:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(cm)requestIsCacheEquivalent:toRequest:">requestIsCacheEquivalent(_:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Always returns false</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">requestIsCacheEquivalent</span><span class="p">(</span><span class="n">_</span> <span class="nv">a</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="n">to</span> <span class="nv">b</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(im)startLoading"></a>
+                    <a name="//apple_ref/swift/Method/startLoading()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(im)startLoading">startLoading()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method retrieves a mock and returns a response based on the configruation it contains.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">startLoading</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(im)stopLoading"></a>
+                    <a name="//apple_ref/swift/Method/stopLoading()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@NSNetworkingMocker@objc(cs)MockURLProtocol(im)stopLoading">stopLoading()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method does nothing as we aren&rsquo;t initiating any network requests</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopLoading</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/netsells/NSNetworkingMocker" target="_blank" rel="external">ABTucanae</a>. All rights reserved. (Last updated: 2018-11-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
