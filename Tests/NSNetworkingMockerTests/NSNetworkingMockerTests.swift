@@ -15,6 +15,7 @@ fileprivate struct TestStruct: Codable, Equatable {
 
 class NSNetworkingMockerTests: XCTestCase {
     
+    
     func testInterceptingRequest() {
         let exp = expectation(description: "Test request intercept")
         

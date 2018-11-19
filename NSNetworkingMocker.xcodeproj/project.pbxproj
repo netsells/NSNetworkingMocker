@@ -56,11 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA326DD521A2CF71005DB04E /* NSNetworkingMockerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA994B10219C852900654400 /* NSNetworkingMockerTests.swift */,
+			);
+			path = NSNetworkingMockerTests;
+			sourceTree = "<group>";
+		};
+		FA326DD621A2D256005DB04E /* NSNetworkingMocker */ = {
+			isa = PBXGroup;
+			children = (
+				FA994B1F219C855D00654400 /* NetworkingMocker.swift */,
+				FA994B1D219C854200654400 /* MockURLProtocol.swift */,
+			);
+			path = NSNetworkingMocker;
+			sourceTree = "<group>";
+		};
 		FA994AF8219C852900654400 = {
 			isa = PBXGroup;
 			children = (
-				FA994B04219C852900654400 /* NSNetworkingMocker */,
-				FA994B0F219C852900654400 /* NSNetworkingMockerTests */,
+				FA994B06219C852900654400 /* Info.plist */,
+				FA326DD1219F1567005DB04E /* NSNetworkingMocker.podspec */,
+				FA994B1C219C853100654400 /* Sources */,
+				FA994B0F219C852900654400 /* Tests */,
 				FA994B03219C852900654400 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,31 +93,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA994B04219C852900654400 /* NSNetworkingMocker */ = {
+		FA994B0F219C852900654400 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FA994B1C219C853100654400 /* Sources */,
-				FA994B05219C852900654400 /* NSNetworkingMocker.h */,
-				FA994B06219C852900654400 /* Info.plist */,
-				FA326DD1219F1567005DB04E /* NSNetworkingMocker.podspec */,
-			);
-			path = NSNetworkingMocker;
-			sourceTree = "<group>";
-		};
-		FA994B0F219C852900654400 /* NSNetworkingMockerTests */ = {
-			isa = PBXGroup;
-			children = (
-				FA994B10219C852900654400 /* NSNetworkingMockerTests.swift */,
+				FA326DD521A2CF71005DB04E /* NSNetworkingMockerTests */,
 				FA994B12219C852900654400 /* Info.plist */,
 			);
-			path = NSNetworkingMockerTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		FA994B1C219C853100654400 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FA994B1D219C854200654400 /* MockURLProtocol.swift */,
-				FA994B1F219C855D00654400 /* NetworkingMocker.swift */,
+				FA994B05219C852900654400 /* NSNetworkingMocker.h */,
+				FA326DD621A2D256005DB04E /* NSNetworkingMocker */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -370,7 +378,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NSNetworkingMocker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,7 +405,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NSNetworkingMocker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +426,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JHJ67RZB8;
-				INFOPLIST_FILE = NSNetworkingMockerTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +445,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4JHJ67RZB8;
-				INFOPLIST_FILE = NSNetworkingMockerTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
